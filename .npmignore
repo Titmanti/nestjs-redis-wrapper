@@ -1,0 +1,43 @@
+# Исходный код и конфигурация TypeScript
+src/
+tsconfig.json
+tsconfg.json
+tsconfig.build.json
+
+# Инструменты разработки
+.github/
+.vscode/
+.idea/
+.editorconfig
+.prettierrc
+.eslintrc.js
+
+# Тесты
+test/
+*.spec.ts
+*.test.ts
+jest.config.js
+coverage/
+
+# Логи и временные файлы
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.tsbuildinfo
+node_modules/
+
+# Файлы окружения
+.env
+.env.*
+
+# Лишние файлы в корне
+publish.yml
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Исключаем все markdown, кроме README
+*.md
+!README.md
+!LICENSE
