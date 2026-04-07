@@ -1,6 +1,6 @@
 {
   "name": "nestjs-redis-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A resilient, type-safe Redis cache wrapper for NestJS with built-in logging, automatic serialization, and a go-style {data, error} response pattern.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

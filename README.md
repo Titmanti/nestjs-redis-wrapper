@@ -1,10 +1,10 @@
-# @star-tms/nestjs-cache
+# nestjs-redis-wrapper
 
 <div align="center">
   <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo" />
   <h3>Advanced Redis Caching for NestJS</h3>
 
-  [![npm version](https://img.shields.io/npm/v/@star-tms/nestjs-cache?style=flat-square)](https://www.npmjs.com/package/@star-tms/nestjs-cache)
+  [![npm version](https://img.shields.io/npm/v/nestjs-redis-wrapper?style=flat-square)](https://www.npmjs.com/package/nestjs-redis-wrapper)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
   [![Build Status](https://img.shields.io/badge/status-active-success?style=flat-square)](https://github.com/tms-star/nestjs-cache)
 </div>
@@ -13,7 +13,7 @@
 
 ## 🎯 Overview
 
-**@star-tms/nestjs-cache** is an advanced Redis wrapper for NestJS, built on top of [liaoliaots/nestjs-redis](https://github.com/liaoliaots/nestjs-redis). It provides a high-level cache service with **Cache-Aside pattern** support, standardized response handling, and full TypeScript support.
+**nestjs-redis-wrapper** is an advanced Redis wrapper for NestJS, built on top of [liaoliaots/nestjs-redis](https://github.com/liaoliaots/nestjs-redis). It provides a high-level cache service with **Cache-Aside pattern** support, standardized response handling, and full TypeScript support.
 
 ---
 
@@ -35,13 +35,13 @@
 Install the package and its required dependencies:
 
 ```bash
-npm install @star-tms/nestjs-cache @liaoliaots/nestjs-redis ioredis
+npm install nestjs-redis-wrapper @liaoliaots/nestjs-redis ioredis
 ```
 
 Or with Yarn:
 
 ```bash
-yarn add @star-tms/nestjs-cache @liaoliaots/nestjs-redis ioredis
+yarn add nestjs-redis-wrapper @liaoliaots/nestjs-redis ioredis
 ```
 
 > **Prerequisites**: Ensure `@nestjs/common` and `@nestjs/core` are installed in your project.
@@ -57,7 +57,7 @@ Use `forRootAsync()` to integrate seamlessly with NestJS `ConfigService`:
 ```typescript
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { CacheModule } from '@star-tms/nestjs-cache';
+import { CacheModule } from 'nestjs-redis-wrapper';
 
 @Module({
   imports: [
@@ -88,7 +88,7 @@ The `CacheService` can be injected into any NestJS provider:
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { CacheService } from '@star-tms/nestjs-cache';
+import { CacheService } from 'nestjs-redis-wrapper';
 
 @Injectable()
 export class UserService {
@@ -112,7 +112,7 @@ The `wrap()` method implements the **Cache-Aside pattern** automatically:
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { CacheService } from '@star-tms/nestjs-cache';
+import { CacheService } from 'nestjs-redis-wrapper';
 
 @Injectable()
 export class UserService {
